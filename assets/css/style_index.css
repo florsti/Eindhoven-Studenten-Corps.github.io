@@ -1,0 +1,102 @@
+#intro {
+  background-image: url('/assets/img/bak.jpg');
+  background-position: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+}
+#intro::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: url('/assets/img/dots.png');
+  background-repeat: repeat;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+#intro .container {
+  z-index: 1;
+}
+#intro h1 {
+  margin-bottom: 0;
+}
+body {
+  padding-top: 50;
+}
+#map {
+  background-color: #DDD;
+  height: 32em;
+  positon: relative;
+}
+#map::before {
+  z-index: 100;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* info box */
+.info-box {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: .8em;
+  padding-top: 2em;
+  margin-bottom: 2em;
+  height: 100%;
+}
+
+/* events */
+.event-row {
+  background-color: #333;
+  overflow:hidden;
+}
+
+.event-name {
+  font-size: 2em;
+  margin: 0;
+  color: white;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.event-image-container {
+  padding: 0;
+}
+
+.event-image {
+  width: 100%;
+}
+
+/* albums */
+.fotos-isert {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  padding-left: auto;
+  padding-right: auto;
+}
+.album-photo {
+  width: 100%;
+}
+.album-container {
+  width: 20%;
+  padding: 0.2em;
+}
+.album-info {
+  background-color: black;
+  padding: 1em;
+}
+.album-name {
+  margin-bottom: 0;
+  padding: 0;
+}
