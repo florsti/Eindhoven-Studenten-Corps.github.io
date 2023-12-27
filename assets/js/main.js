@@ -112,3 +112,29 @@ DeBallenbak.onLoad(() => {
     window.addEventListener("resize", handleFade.bind(this));
     handleFade();
 });
+
+$(document).ready(function() {
+    setTimeout(
+        function() 
+        {
+//            if ($(".sk-facebook-photo-albums-all-posts")[0]){
+//                $(".sk-facebook-photo-albums-all-posts").css("background-color", "red");
+//            } else {
+//                console.log( "niet aanwezig!" );
+//            }
+            if ($(".tutorial_link")[0]){
+                $(".tutorial_link").css("display", "none");
+            } else {
+                console.log( "niet aanwezig!" );
+            }
+            if ($('#mobile-only-visible').is(':visible'))
+            {
+                $(".sk-ww-facebook-photo-albums-item:eq(2)").css("display", "none");
+                $(".sk-ww-facebook-photo-albums-item:eq(3)").css("display", "none");
+                $(".sk-ww-facebook-photo-albums-item:eq(4)").css("display", "none");
+                $(".sk-ww-facebook-photo-albums-item:eq(5)").css("display", "none");
+            }
+//            console.log( "ready!" );
+        }, 1000);
+
+});
