@@ -1,5 +1,5 @@
 #intro {
-  background-image: url('/assets/img/bak.jpg');
+  background-image: url('/blog/assets/img/bak.jpg');
   background-position: center;
   padding-top: 5em;
   padding-bottom: 5em;
@@ -16,7 +16,7 @@
   top: 0;
   bottom: 0;
   z-index: 0;
-  background-image: url('/assets/img/dots.png');
+  background-image: url('/blog/assets/img/dots.png');
   background-repeat: repeat;
   background-color: rgba(0, 0, 0, .6);
 }
@@ -99,4 +99,10 @@ body {
 .album-name {
   margin-bottom: 0;
   padding: 0;
+}
+.sk_branding {
+  display: none !important;
+}
+.tutorial_link {
+  display: none;
 }
