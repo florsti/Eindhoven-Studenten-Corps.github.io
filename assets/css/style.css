@@ -158,25 +158,40 @@ textarea {
     min-height: 150px;
     resize: vertical;
 }
-
-@media screen and (max-width: 1280px) {
+.dbbe-widget {
+    height: 880px;
+}
+@media screen and (max-width: 1200px) {
   body, input, select, textarea {
     font-size: 12pt;
+  }
+  .dbbe-widget {
+    height: 780px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .dbbe-widget {
+    height: 695px;
   }
 }
 @media screen and (max-width: 980px) {
   body, input, select, textarea {
     font-size: 11pt;
-  }
 }
 @media screen and (max-width: 736px) {
   body, input, select, textarea {
     font-size: 10pt;
   }
+  .dbbe-widget {
+    height: 665px;
+  }
 }
 @media screen and (max-width: 480px) {
   body, input, select, textarea {
     font-size: 10pt;
+  }
+  .dbbe-widget {
+    height: 500px;
   }
 }
 main a, footer a {
@@ -346,8 +361,8 @@ hr.major {
 }
 
 section {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   position: relative;
 }
 
