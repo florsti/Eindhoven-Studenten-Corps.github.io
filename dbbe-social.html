@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Backbone with Mighty Moo Photos</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <!-- blue imp gallery -->
+        <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    
+        <style>
+        .photo-thumb{
+            width:160px;
+            height:160px;
+            float:left;
+            border: thin solid #d1d1d1;
+            margin:0 1em 1em 0;
+        }
+        .photo-thumb2{
+            width:60%;
+            float:left;
+            border: thin solid #d1d1d1;
+            margin:0 1em 1em 0;
+        }
+        .album-names a, a:visited, a:hover, a:active{
+            color:#fff;
+            text-decoration: none;
+        }
+    
+        div#blueimp-gallery div.modal {
+            overflow: visible;
+        }
+        </style>
+    </head>
+    <body>
+    <div class="modal" id="exampleModal">
+        <div class="modal-dialog" style="width:90%;">
+        <div class="modal-content">
+            <div class="modal-header"style="padding: 10px 10px 20px 10px;">
+                <h5 class="modal-title" id="staticBackdropLabel" style="float:left;">Album</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="float:right;">X</button>
+            </div>
+            <div class="modal-body">
+                <div class="container" id="friends-list">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="features" class="blue">
+            <div class="content">
+                <div class="mijslider" id="albums-list"></div>
+                <p> Voor meer, check onze <a style="color:#337ab7;" href="https://www.facebook.com/deBallenbak/photos_albums" target="_blank">Facebook pagina</a> </p>
+                <div class="mijslider2" id="instas-list"></div>
+                <p> Voor meer, check onze <a style="color:#337ab7;" href="https://www.instagram.com/ballenbakeindhoven" target="_blank">Instagram pagina</a> </p>
+            </div>
+</section>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<!--        <script type="text/javascript" src="slick/jquery-1.11.0.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script type="text/javascript" src="slick/jquery-migrate-1.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="slick/style.css"/>
+        <script src="https://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
+        <script src="https://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript" src="dbbe-social.js"></script>
+
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev"></a>
+    <a class="next"></a>
+    <a class="close"></a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">×</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+</body>
+</html>
