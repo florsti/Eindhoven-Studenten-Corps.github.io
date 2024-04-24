@@ -1,0 +1,12 @@
+name: weekly-refresh
+run-name: weekly-refresh
+on:
+  schedule:
+    # At 04:00 on Monday
+    - cron: '0 15 * * 3'
+  workflow_dispatch:
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date > published.txt
