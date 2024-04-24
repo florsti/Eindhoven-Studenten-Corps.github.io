@@ -6,13 +6,24 @@ on:
     - cron: '0 15 * * 3'
   workflow_dispatch:
 jobs:
-  action:
+  build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
       - name: Overwrite file
         uses: "DamianReeves/write-file-action@master"
         with:
           path: published.txt
           write-mode: overwrite
           contents: |
-            console.log(date)
+            console.log('some contents')
+            
+      - name: Commit & Push
+        uses: Andro999b/push@v1.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true
+          message: 'Overwritten by Github Actions - ${date}'
