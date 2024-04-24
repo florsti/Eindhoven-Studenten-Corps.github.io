@@ -18,7 +18,7 @@ jobs:
           path: published.txt
           write-mode: overwrite
           contents: |
-            console.log('some contents')
+            date
             
       - name: Commit & Push
         uses: Andro999b/push@v1.3
