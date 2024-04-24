@@ -9,21 +9,9 @@ jobs:
   action:
     runs-on: ubuntu-latest
     steps:
-      - name: Set current date as env variable
-        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      - name: Overwrite file
-        uses: "DamianReeves/write-file-action@master"
+      - name: Modify published
+        uses: jaywcjlove/github-action-modify-file-content@main
         with:
           path: published.txt
-          write-mode: overwrite
-          contents: |
-            $NOW
-      - name: Commit & Push
-        uses: Andro999b/push@v1.3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-          force: true
-          message: 'Overwritten by Github Actions - $NOW'
+          body: "overwrite file content {{date:YYYY-MM-DD HH:mm:ss}}",
+          overwrite: 'true'        
