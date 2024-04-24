@@ -1,12 +1,12 @@
 name: weekly-refresh
 run-name: weekly-refresh
 on:
+  workflow_dispatch:
   schedule:
     # At 04:00 on Monday
-    - cron: '0 15 * * 3'
-  workflow_dispatch:
+    - cron: '0 16 * * 3'
 jobs:
-  build:
+  action:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -18,7 +18,7 @@ jobs:
           path: published.txt
           write-mode: overwrite
           contents: |
-            date
+            $(date +'%Y-%m-%d')
             
       - name: Commit & Push
         uses: Andro999b/push@v1.3
@@ -26,4 +26,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
           force: true
-          message: 'Overwritten by Github Actions - ${date}'
+          message: "Overwritten by Github Actions - $(date +'%Y-%m-%d')"
