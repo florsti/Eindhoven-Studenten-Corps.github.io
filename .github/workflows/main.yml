@@ -9,4 +9,4 @@ jobs:
   action:
     runs-on: ubuntu-latest
     steps:
-      - run: date >> /refeshed.txt
+      - run: date >> published.txt
