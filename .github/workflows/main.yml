@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Modify published
-        uses: jaywcjlove/github-action-modify-file-content@main
+        uses: "jaywcjlove/github-action-modify-file-content@main"
         with:
           path: published.txt
-          body: "overwrite file content {{date:YYYY-MM-DD HH:mm:ss}}",
+          body: "{{date:YYYY-MM-DD HH:mm:ss}}"
           overwrite: 'true'        
