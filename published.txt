@@ -1,1 +1,1 @@
-eerste regel
+console.log('some contents')
