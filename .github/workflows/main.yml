@@ -9,4 +9,10 @@ jobs:
   action:
     runs-on: ubuntu-latest
     steps:
-      - run: date >> published.txt
+      - name: Overwrite file
+        uses: "DamianReeves/write-file-action@master"
+        with:
+          path: published.txt
+          write-mode: overwrite
+          contents: |
+            console.log(date)
