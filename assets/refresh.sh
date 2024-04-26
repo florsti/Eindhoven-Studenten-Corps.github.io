@@ -1,0 +1,1 @@
+curl -i -X GET "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=IGQWRNSmppSkhuN0k1YkdpTy1Ma1VONXI4TE51YmdoR0xPZA3hmTllHY195LWJjc0EzX0JwNkZAhM0V6VWRnVVZAvS0dEalk2TS1fZA3MtVTIwaGcyM0RkQmcwV010RXIwTnNFVmVMOVU5M0VnYVhmeGRLTDhzWG12ZAVkZD"
