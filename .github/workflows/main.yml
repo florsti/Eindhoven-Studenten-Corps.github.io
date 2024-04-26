@@ -4,14 +4,15 @@ on:
   workflow_dispatch:
   schedule:
     # At 04:00 on Monday
-    - cron: '0 16 * * 3'
+    - cron: '0 16 * * 5'
 jobs:
   action:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./assets
     steps:
-      - name: Modify published
-        uses: "jaywcjlove/github-action-modify-file-content@main"
-        with:
-          path: published.txt
-          body: "{{date:YYYY-MM-DD HH:mm:ss}}"
-          overwrite: 'true'        
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v4  
+      - name: Run a script
+        run: ./refresh.sh
