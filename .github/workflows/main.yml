@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # At 04:00 on Monday
-    - cron: '0 16 * * 5'
+    - cron: '0 11 * * 6'
 jobs:
   action:
     runs-on: ubuntu-latest
@@ -13,6 +13,6 @@ jobs:
         working-directory: ./assets
     steps:
       - name: Check out the repository to the runner
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4  1
       - name: Run a script
-        run: ./refresh.sh
+        run: bash refresh.sh
